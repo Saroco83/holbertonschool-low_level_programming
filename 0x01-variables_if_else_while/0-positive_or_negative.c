@@ -17,11 +17,11 @@ int main(void)
 		printf("%iis positive\n", n);
 	}
 	if (n < 0)
-	{	
+	{
 		printf("%i is negative\n", n);
 	}
 	if (n == 0)
-	{	
+	{
 		printf("%i is zero\n", n);
 	}
 	return (0);
