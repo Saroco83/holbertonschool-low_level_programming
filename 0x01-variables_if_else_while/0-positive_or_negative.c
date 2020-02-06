@@ -4,7 +4,7 @@
 /**
  * main - Function ppal.
  * Return: 0 on succes
- * 
+ *
  */
 int main(void)
 {
