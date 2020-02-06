@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	char a;
+	char alph;
 
-	for (a = 97; a < 122; a++)
+	for (alph = 'a' ; alph <= 'z' ; alph++)
 	{
-		putchar(a);
+		putchar(alph);
 	}
 	putchar('\n');
 	return (0);
