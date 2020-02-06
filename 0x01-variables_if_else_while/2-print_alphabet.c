@@ -2,14 +2,14 @@
 /**
  * main - functim ppal.
  *
- * Return: succes 0.
+ * return: succes 0.
  *
  */
 int main(void)
 {
-	char a = 97;
+	char a;
 
-	for (; a < 122; a++)
+	for (a = 97; a < 122; a++)
 	{
 		putchar(a);
 	}
