@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
- * main - functim ppal.
- *
- * return: succes 0.
- *
+ *main - functim ppal.
+ *Return: On succes return 0.
  */
 int main(void)
 {
