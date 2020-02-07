@@ -7,19 +7,21 @@ int main(void)
 {
 	int i, j;
 
-	for (i = '0'; i <= '9'; i++)
-	{	putchar(i);
-	putchar(j);
-		for (j = '0'; j <= '9'; i++)
-*		{
-*		*		/**	if 
-*		*	(i != '9' && j != '9')
-*		*	{
-*		*		putchar(44);
-*		*		putchar(32);
-*		*	
-*		}
-*/	}
+	for (i = 48; i <= 57; i++)
+	{		
+		for (j = 48; j <= 57; j++)
+		{
+		putchar(i);
+		putchar(j);
+
+			if 
+			(i != 57 || j != 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
+		}
+	}
 	putchar('\n');
 	return (0);
 }
