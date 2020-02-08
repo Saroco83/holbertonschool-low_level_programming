@@ -13,20 +13,19 @@ int main(void)
 		{
 			for (c = 48; c <= 57; c++)
 			{
-				
-			//	if
-			//	(a < b && a != b && b < c && b != c && a < c && c !=:)
-			//	{
+				if
+					(a < b && a != b && b < c && b != c && a < c && a != c)
+				{
 					putchar(a);
 					putchar(b);
 					putchar(c);
-			//		if
-			//		(a != 56 || b != 57)
-			//		{
+					if
+					(a != 55 || b != 56 || c != 57)
+					{
 						putchar(44);
 						putchar(32);
-			//		}
-			//	}
+					}
+				}
 			}
 		}
 	}
