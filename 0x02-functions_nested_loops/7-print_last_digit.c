@@ -11,10 +11,10 @@ int print_last_digit(int num)
 
 	if (num < 0)
 	{
-		abs = num * (-1);
-		res = abs % 10;
-		_putchar(res + 48);
-		return (res);
+		res = num % 10;
+		abs = res * (-1);
+		_putchar(abs + 48);
+		return (abs);
 	}
 	else
 	{
@@ -22,5 +22,4 @@ int print_last_digit(int num)
 		_putchar(res + 48);
 		return (res);
 	}
-	return(0);
 }
