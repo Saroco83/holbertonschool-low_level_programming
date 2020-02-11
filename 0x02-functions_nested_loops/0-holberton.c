@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * main - function ppal
@@ -14,6 +13,6 @@ int main(void)
 	{
 		_putchar(a[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
