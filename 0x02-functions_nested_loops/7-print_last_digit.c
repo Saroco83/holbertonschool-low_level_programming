@@ -17,7 +17,10 @@ int print_last_digit(int num)
 		return (res);
 	}
 	else
-	res = num % 10;
-	_putchar(res + 48);
-	return (res);
+	{
+		res = num % 10;
+		_putchar(res + 48);
+		return (res);
+	}
+	return(0);
 }
