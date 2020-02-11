@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int a, b, c;
+	int a, b, c, d;
 
 	for (a = 48; a <= 57; a++)
 	{
@@ -13,18 +13,22 @@ int main(void)
 		{
 			for (c = 48; c <= 57; c++)
 			{
-				if
-					(a < b && a != b && b < c && b != c && a < c && a != c)
+				for(d = 48; d <= 57; d++)
 				{
+//				if
+//					(a < b && a != b && b < c && b != c && a < c && a != c)
+//				{
 					putchar(a);
 					putchar(b);
 					putchar(c);
-					if
-					(a != 55 || b != 56 || c != 57)
-					{
+					putchar(d);
+//					if
+//					(a != 55 || b != 56 || c != 57)
+//					{
 						putchar(44);
 						putchar(32);
-					}
+//					}
+//				}
 				}
 			}
 		}
