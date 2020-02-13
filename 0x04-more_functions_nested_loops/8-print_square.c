@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_square - chart characters. 
+ * print_square - chart characters.
  * @size: parameter of square
  */
 void print_square(int size)
