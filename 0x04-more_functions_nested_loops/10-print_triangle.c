@@ -8,7 +8,7 @@ void print_triangle(int size)
 {
 	int x, y, z;
 
-	if (size < 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
@@ -18,7 +18,7 @@ void print_triangle(int size)
 		{
 			for (x = size; x > z; x--)
 			{
-				_putchar('_');
+				_putchar(' ');
 			}
 			for (y = 0; y < z; y++)
 			{
