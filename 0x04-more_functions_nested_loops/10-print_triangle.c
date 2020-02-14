@@ -8,7 +8,11 @@ void print_triangle(int size)
 {
 	int x, y, z;
 
-	if (size > 0 )
+	if (size < 0)
+	{
+		_putchar('\n');
+	}
+	else
 	{
 		for (z = 1; z <= size; z++)
 		{
@@ -23,6 +27,4 @@ void print_triangle(int size)
 			_putchar('\n');
 		}
 	}
-	else
-	_putchar('\n');
 }
