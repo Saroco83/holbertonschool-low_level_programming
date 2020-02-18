@@ -1,11 +1,14 @@
 #include "holberton.h"
 /**
- * swap_int - function to exange
+ * swap_int - function to exange.
  * @a: parameter.
  * @b: parameter.
  */
 void swap_int(int *a, int *b)
 {
-	*a = 42;
-	*b = 98;
+	int c;
+
+	(c = *a);
+	(*a = *b);
+	(*b = c);
 }
