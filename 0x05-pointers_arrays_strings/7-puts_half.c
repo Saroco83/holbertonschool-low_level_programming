@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * puts_half - function
  * @str: parameter
@@ -16,16 +17,16 @@ void puts_half(char *str)
 	if (a % 2 != 0)
 	{
 		n =((length_of_the_string - 1) / 2) + 1;
+		printf("%d", n);
 	}
 	else
 	{
 	(n = length_of_the_string / 2);
 	}
-	i = n;
-	while (str[i] != '\0')
+	while (str[n] != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar(str[n]);
+		n++;
 	}
 	_putchar('\n');
 }
