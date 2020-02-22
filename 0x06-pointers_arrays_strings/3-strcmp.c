@@ -11,14 +11,9 @@ int _strcmp(char *s1, char *s2)
 	int *H2 = null;
 	int *H1 = null;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1[i] != '\0' && s1[i] == s2[i]; i++)
 	{
-		*H1 += s1[i];
+		H1 = s1[i];
 	}
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-		*H2 += s2[j];
-	}
-	z = *H1 + *H2;
 	return(z);
 }
