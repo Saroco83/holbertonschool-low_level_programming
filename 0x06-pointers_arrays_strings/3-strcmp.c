@@ -7,13 +7,11 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, j, z;
-	int *H2 = null;
-	int *H1 = null;
+	int inc = 0, difrnc = 0;
 
-	for (i = 0; s1[i] != '\0' && s1[i] == s2[i]; i++)
-	{
-		H1 = s1[i];
-	}
-	return(z);
+	do {
+		difrnc = s1[inc] - s2[inc];
+		inc++;
+	} while (s1[inc] != '\0' && s1[inc] == s2[inc]);
+	return (difrnc);
 }
