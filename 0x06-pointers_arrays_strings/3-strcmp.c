@@ -9,9 +9,14 @@ int _strcmp(char *s1, char *s2)
 {
 	int inc = 0, difrnc = 0;
 
-	do {
-		difrnc = s1[inc] - s2[inc];
+	while (s1[inc] || s2[inc])
+	{
+		if (s1[inc] != s2[inc])
+		{
+			difrnc = s1[inc] - s2[inc];
+			break;
+		}
 		inc++;
-	} while (s1[inc] != '\0' && s1[inc] == s2[inc]);
+	}
 	return (difrnc);
 }
