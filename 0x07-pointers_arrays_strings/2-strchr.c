@@ -13,8 +13,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[count] == c)
 		{
-			s = &s[count];
-			return (s);
+			return (&s[count]);
 		}
 	}
 	return ('\0');
