@@ -15,6 +15,8 @@ char *_strchr(char *s, char c)
 		{
 			return (&s[count]);
 		}
+		if(s[count + 1] == '\0')
+		{
+		return (&s[count + 1]);
 	}
-	return (&s[count + 1]);
 }
