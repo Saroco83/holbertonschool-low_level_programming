@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _puts_recursion - function to recursivity
  * @s: pointer parameter to string
