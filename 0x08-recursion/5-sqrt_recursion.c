@@ -1,13 +1,13 @@
 #include "holberton.h"
 #include <stdio.h>
 
-int sqrt_parmtr(int n, int parmtr);
 /**
- * sqrt_parmtr - recursive function
+ * _sqrt_recursion - recursive function
  * @n: parameter 1
  * @parmtr: parameter to str the iteration
  * Return: value of square
  */
+int sqrt_parmtr(int n, int parmtr);
 int _sqrt_recursion(int n)
 {
 	int parmtr = 1;
@@ -16,6 +16,12 @@ int _sqrt_recursion(int n)
 	m = sqrt_parmtr(n, parmtr);
 	return (m);
 }
+/**
+ * sqrt_parmtr - second function to program
+ * @n: parameter
+ * @parmtr: parameter
+ * Return: value of root
+ */
 int sqrt_parmtr(int n, int parmtr)
 {
 	if (parmtr > n)
