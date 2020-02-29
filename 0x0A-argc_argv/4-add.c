@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ *
+ *
+ *
+ */
+int main(int argc, char* argv[])
+{
+	int i = 1, add = 0, j = 0;
+
+	if (argc == 1)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		while (i < argc)
+		{
+			while (argv[i][j] != '\0')
+			{
+				if (!(argv[i][j] <= '9' && argv[i][j] >= '0'))
+				{
+					printf("ERROR");	
+					return(1);
+				}
+			j++;
+			}
+		i++;
+		}
+		add += atoi (*(argv + i));
+		printf ("%d\n", add);
+		return (add);
+	}
+	return(0);
+}
