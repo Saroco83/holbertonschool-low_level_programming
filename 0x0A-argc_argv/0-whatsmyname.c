@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
- *
+ * main - function ppal.
+ * @argc: counter.
+ * @argv: values, strings.
+ * Return: integer value.
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	if(argc && argv)
+	if (argc && argv)
 	{
 		printf("%s\n", argv[argc - 1]);
 	}
-	return(0);
+	return (0);
 
 }
