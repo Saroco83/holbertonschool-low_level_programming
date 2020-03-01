@@ -4,7 +4,7 @@
  * main - function ppal
  * @argc: counter
  * @argv: values, strings
- * Return: integer value
+ * Return: 0 integer value
  */
 int main(int argc, char *argv[])
 {
