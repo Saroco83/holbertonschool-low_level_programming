@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - function ppail.
- * @argc: counter.
- * @argv: values, strings.
- * Return: integer value.
+ * main - function ppail
+ * @argc: counter
+ * @argv: values strings
+ * Return: integer value
  */
 int main(int argc, char *argv[])
 {
