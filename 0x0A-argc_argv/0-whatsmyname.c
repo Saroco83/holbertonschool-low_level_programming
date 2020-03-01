@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - function ppal
- * @argc: counter
- * @argv: values, strings
- * Return: 0 integer value
+ * main - Funtion to call
+ * @argc: couter of arrays
+ * @argv: array pointer
+ * Return: 0 on succes
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	if (argc >= 0)
 		printf("%s\n", argv[0]);
 
 	return (0);
-
 }
