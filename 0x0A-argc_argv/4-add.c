@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 	else
 	{
@@ -22,7 +23,7 @@ int main(int argc, char *argv[])
 			{
 				if (!(argv[i][j] <= '9' && argv[i][j] >= '0'))
 				{
-					printf("ERROR");
+					printf("ERROR\n");
 					return (1);
 				}
 			j++;
@@ -31,7 +32,6 @@ int main(int argc, char *argv[])
 		}
 		add += atoi(*(argv + i));
 		printf("%d\n", add);
-		return (add);
 	}
 	return (0);
 }
