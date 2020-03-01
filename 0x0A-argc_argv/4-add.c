@@ -18,20 +18,18 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		while (i < argc)
+		for (i = 1; i < argc; i++)
 		{
-			while (argv[i][j])
+			for (j = 0; argv[i][j]; j++)
 			{
 				if (!isdigit(argv[i][j]))
 				{
 					printf("ERROR\n");
 					return (1);
 				}
-			j++;
 			}
-		i++;
+			add += atoi(argv[i]);
 		}
-		add += atoi(*(argv + i));
 		printf("%d\n", add);
 	}
 	return (0);
