@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - function ppal.
  * @argc: counter.
@@ -19,9 +20,9 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			while (argv[i][j] != '\0')
+			while (argv[i][j])
 			{
-				if (!(argv[i][j] <= '9' && argv[i][j] >= '0'))
+				if (!isdigit(argv[i][j]))
 				{
 					printf("ERROR\n");
 					return (1);
