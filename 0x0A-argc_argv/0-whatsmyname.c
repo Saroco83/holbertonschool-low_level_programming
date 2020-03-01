@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - function ppal.
  * @argc: counter.
@@ -8,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc && argv)
+	if (argc >= 0)
 	{
 		printf("%s\n", argv[argc - 1]);
 	}
