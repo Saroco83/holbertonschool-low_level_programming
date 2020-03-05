@@ -1,22 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
- *
+ * alloc_grid - memory allocation
+ * @width: grid shape
+ * @height: grid shape
+ * Return: double pointer
  */
 int **alloc_grid(int width, int height)
 {
-  int **grid = NULL;
-  
-  grid = malloc(width * height * sizeof(int));
-  if (grid == NULL)
-  {
-    return(NULL);
-  }
-    for (; **(grid +1) != '\0'; grid++)
-    {
-        **grid = 0;
-    }
-  return (grid);  
-  }
+	int **grid = NULL;
+	int i, j;
+
+	if ((width <= 0) || (height <= 0))
+	{
+		return (NULL);
+	}
+	grid = malloc(height * sizeof(int *));
+	if (grid == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < height; i++)
+	{
+		grid[i] = malloc(sizeof(int) * width);
+		if (grid[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				free(grid[j]);
+			}
+			free(grid);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			grid[i][j] = 0;
+		}
+	}
+	return (grid);
+}
