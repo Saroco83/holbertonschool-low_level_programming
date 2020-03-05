@@ -13,8 +13,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int countS1, countS2;
 	char *secondstr;
 
-	if ((s1 == NULL) || (s2 == NULL))
-		return ("");
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	for (countS1 = 0; s1[countS1] != '\0'; countS1++)
 	for (countS2 = 0; s2[countS2] != '\0'; countS2++)
 	if (n <= (countS2))
@@ -28,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		secondstr = malloc(sizeof(char) * (countS1 + countS2 + 1));
 		if (secondstr == NULL)
-			return ("");
+			return (NULL);
 		size2ndstr = countS1 + countS2;
 	}
 	for (fill1 = 0; s1[fill1] != '\0'; fill1++)
