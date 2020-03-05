@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	secondstr = malloc(sizeof(char) * (countS1 + n + 1));
 	if (secondstr == NULL)
-	{	
+	{
 		return (NULL);
 	}
 	for (fill1 = 0; s1[fill1] != '\0'; fill1++)
