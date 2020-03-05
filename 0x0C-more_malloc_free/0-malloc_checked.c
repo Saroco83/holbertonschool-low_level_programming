@@ -8,18 +8,14 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void * alloc = NULL;
+	void *alloc = NULL;
 	int r = 98;
-	int * retu = &r;
+	int *retu = &r;
 
-	if (b == '\0')
-	{
-		return (retu);
-	}
-	alloc = (void *) malloc (b);
+	alloc = (void *) malloc(b);
 	if (alloc == NULL)
 	{
-		free (alloc);
+		free(alloc);
 		return (retu);
 	}
 	return (alloc);
