@@ -9,14 +9,11 @@
 void *malloc_checked(unsigned int b)
 {
 	void *alloc = NULL;
-	int r = 98;
-	int *retu = &r;
 
 	alloc = (void *) malloc(b);
 	if (alloc == NULL)
 	{
-		free(alloc);
-		return (retu);
+		exit (98);
 	}
 	return (alloc);
 }
