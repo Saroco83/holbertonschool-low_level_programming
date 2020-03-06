@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * array - function to create array
+ * array_range - function to create array
  * @min: fewer number
  * @max: higher number
  * Return: pointer to integer
@@ -9,21 +9,20 @@
 int *array_range(int min, int max)
 {
 	int *leo = NULL;
-	int i, size;
+	int i;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	size = max - min + 1;
-	leo = malloc(size * 4);
+	leo = malloc((max - min + 1) * sizeof(int));
 	if (leo == NULL)
 	{
 		return (NULL);
 	}
-	for (i = min; i <= max; i++)
+	for (i = min; i <= (max - min); i++)
 	{
-		leo[i] = i;
+		leo[i] = min + i;
 	}
 	return (leo);
 }
