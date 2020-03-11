@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * free_dog - function to free memory.
+ * @d: pointer to struct
+ * Return: void
  */
 void free_dog(dog_t *d)
 {
-
+	if (d)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
