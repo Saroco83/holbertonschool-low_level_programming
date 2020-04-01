@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd = open(filename, O_RDONLY);
 	char *space;
-	ssize_t num-byt, av-byt;
+	ssize_t num_byt, av_byt;
 
 	if (!filename)
 	{
@@ -30,19 +30,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	else
 	{
-		num-byt = read(fd, space, letter)
-		if (num-byt == -1)
+		num_byt = read(fd, space, letters);
+		if (num_byt == -1)
 		{
 			free(space);
 			return (0);
 		}
-		av-byt = write(STDOUT_FILENO, space, num-byt);
-		if (num-byt == -1)
+		av_byt = write(STDOUT_FILENO, space, num_byt);
+		if (num_byt == -1)
 		{
 			free(space);
 			return (0);
 		}
 		close(fd);
 	}
-	return(av-byt);
+	return(av_byt);
 }
