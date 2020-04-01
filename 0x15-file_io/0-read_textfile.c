@@ -4,9 +4,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- * 
- *
+ * read_textfile - code to read text
+ * @filename: file source
+ * @letters: file text
+ * Return: number of words
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -26,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == 1)
 	{
 		free(space);
-		return(0);
+		return (0);
 	}
 	else
 	{
@@ -44,5 +45,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		}
 		close(fd);
 	}
-	return(av_byt);
+	return (av_byt);
 }
