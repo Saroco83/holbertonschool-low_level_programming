@@ -14,7 +14,7 @@ int _strlen(char *s);
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int leo;
-	
+
 	if (!filename)
 	{
 		return (-1);
@@ -22,7 +22,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	leo = open(filename, O_RDWR | O_APPEND, 0600);
 	if (!text_content)
 	{
-		return(1);
+		return (1);
 	}
 	if (leo == -1)
 	{
@@ -42,12 +42,12 @@ int append_text_to_file(const char *filename, char *text_content)
  */
 int _strlen(char *s)
 {
-        int c = 0;
+	int c = 0;
 
-        while (*s != '\0')
-        {
-                c++;
-                s++;
-        }
-        return (c);
+	while (*s != '\0')
+	{
+		c++;
+		s++;
+	}
+	return (c);
 }
