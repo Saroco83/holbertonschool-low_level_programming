@@ -1,10 +1,8 @@
 #include <stdio.h>
-/**
- * main - Print the array
- *
- * Return: On success 1.
- */
-char main(void)
+#define p printf("Hola, holberton\n");
+
+int main(void)
 {
-	printf("Hello, Holberton\n");
+	p;
+	return(0);
 }
