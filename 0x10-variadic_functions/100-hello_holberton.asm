@@ -1,7 +1,12 @@
-#include "variadic_functions.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
+section .data
+	text db 'Hello, Holberton',0xa
+section .text
+	global main 
+main:
+	mov ebx,1
+	mov ecx,text
+	mov edx,17
+	mov eax,4
+	int 0x80
+	mov eax,0
+	int 0x80
