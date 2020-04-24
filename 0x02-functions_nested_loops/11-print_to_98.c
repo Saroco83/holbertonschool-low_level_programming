@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
-/*
- * print_to_98 - function
+/**
+ * print_to_98 - function in printing
  * @n: parameter of value
  * Return: 1 on succes or -1 if fails
  *
