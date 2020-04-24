@@ -1,30 +1,31 @@
 #include "holberton.h"
+
 /**
- * cap_string - capitalizes all words of a string.
- * @s: pointer to string parameter
- * Return: s pointer
- */
+* cap_string - Entry point
+* @s: char variable
+* Return: s
+*/
+
 char *cap_string(char *s)
 {
-	char k[14] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
-	int  a = 0, b = 0;
+	int i = 0, ban = 0;
 
-	while (s[a] != '\0')
+	if (s[0] >= 97 && s[0] <= 122)
+		s[0] = s[0] - 32;
+
+	while (s[i])
 	{
-		if (s[0] >= 'a' && s[0] <= 'z')
-			s[0] -= 32;
-		while (k[b] != '\0')
-		{
-			if (s[a] == k[b])
-			{
-				if ((s[a + 1] >= 'a') && (s[a + 1] <= 'z'))
-				{
-					s[a + 1] = s[a + 1] - 32;
-				}
-			}
-			b++;
-		}
-		a++;
+		if (s[i] == '\t' || s[i] == '\n' || s[i] == 32 || s[i] == 44)
+			ban = 1;
+		if (s[i] == 59 || s[i] == 46 || s[i] == 33 || s[i] == 63)
+			ban = 1;
+		if (s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
+			ban = 1;
+		if (ban)
+			if (s[i + 1] >= 97 && s[i + 1] <= 122)
+				s[i + 1] = s[i + 1] - 32;
+		ban = 0;
+		i++;
 	}
 	return (s);
 }
