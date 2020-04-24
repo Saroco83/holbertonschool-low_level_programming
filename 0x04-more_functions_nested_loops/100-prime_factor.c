@@ -1,22 +1,20 @@
 #include <stdio.h>
 /**
- * main - fuction.
- * Return: o on succes.
+ * main - main.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	long int a = 1231952;
-	int b = 2;
-
-	do
+	long a, b = 612852475143;
+	for (a = 2; a <= b; a++)
 	{
-		do
+		if (b % a == 0)
 		{
-			a = a / b;
-		}while(a % b == 0);
-		
-		b++;
-	}while(b < a);
-	printf("%d\n", b);
-	return(0);
+			b = b / a;
+			a--;
+		}
+	}
+	printf("%lu\n", a);
+	return (0);
 }
