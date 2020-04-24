@@ -1,51 +1,47 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
-/**
- * print_all - functio to execute
- * @format: list
- */
-void print_all(const char * const format, ...)
-{
-	int i = 0, j = 0;
-	va_list arguments;
-	char *str = NULL;
 
-	va_start(arguments, format);
-	while (format[j] != '\0')
+/**
+ * print_all - entry point
+ * @ft: char * variable
+ * @...: char
+*/
+
+void print_all(const char * const ft, ...)
+{
+	va_list valist;
+	int j = 0;
+	char *aux;
+
+	while (ft && ft[j])
 	{
-		j++;
-	}
-	while (format[i])
-	{
-		switch (format[i])
+		va_start(valist, ft);
+		while (ft[j])
 		{
-			case 'c':
-			printf("%c", (char)va_arg(arguments, int));
-			break;
-			case 'i':
-			printf("%i", va_arg(arguments, int));
-			break;
-			case 'f':
-			printf("%f", (float)va_arg(arguments, int));
-			break;
-			case 's':
-			str = va_arg(arguments, char *);
-			if (str == NULL)
+			switch (ft[j])
 			{
-				printf("(nil)");
-				break;
+				case 'c':
+					printf("%c", va_arg(valist, int));
+					break;
+				case 'i':
+					printf("%d", va_arg(valist, int));
+					break;
+				case 'f':
+					printf("%f", va_arg(valist, double));
+					break;
+				case 's':
+					aux = va_arg(valist, char *);
+					if (aux == NULL)
+						aux = "(nil)";
+					printf("%s", aux);
+					break;
 			}
-			printf("%s", str);
-			break;
+			if ((ft[j] == 'i' || ft[j] == 'c' || ft[j] == 'f' ||
+						ft[j] == 's') && ft[j + 1] != '\0')
+				printf(", ");
+			j++;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' ||
-			format[i] == 'f' || format[i] == 's') && (i < (j - 1)))
-		{
-			printf(", ");
-		}
-		i++;
 	}
-	va_end(arguments);
 	printf("\n");
+	va_end(valist);
 }
