@@ -1,26 +1,18 @@
 #include "holberton.h"
-
 /**
- * print_chessboard - prints the chessboard
- * @a: array
+ * print_chessboard - writes the character c to stdout
+ * @a: The character to print
  *
- * Return: 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 void print_chessboard(char (*a)[8])
 {
-
-int x, y;
-
-for (x = 0; x < 8; x++)
-{
-
-	for (y = 0; y < 8; y++)
+int i, x;
+for (i = 0; i <= 7; i++)
 	{
-	_putchar (a[x][y]);
+	for (x = 0; x <= 7; x++)
+	_putchar(a[i][x]);
+_putchar('\n');
 	}
-	_putchar ('\n');
-
-}
-
-}
+}i
