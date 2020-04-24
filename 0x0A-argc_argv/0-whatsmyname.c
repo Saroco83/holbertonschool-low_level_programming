@@ -1,15 +1,13 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
- * @argc: int variable
- * @argv: char* variable
- *
- * Return: Always 0 (Success)
+ * main - name
+ * @argc: var inte
+ * @argv: pointer string
+ * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[argc - argc]);
+	argc = argc;
+	printf("%s\n", *argv);
 	return (0);
 }
