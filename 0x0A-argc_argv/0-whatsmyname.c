@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Funtion to call
- * @argc: couter of arrays
- * @argv: array pointer
- * Return: 0 on succes
+ * main - Entry point
+ * @argc: int variable
+ * @argv: char* variable
+ *
+ * Return: Always 0 (Success)
  */
-int main(int argc, char **argv)
-{
-	if (argc >= 0)
-		printf("%s\n", argv[0]);
 
+int main(int argc, char *argv[])
+{
+	printf("%s\n", argv[argc - argc]);
 	return (0);
 }
