@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-/*
+/**
  * main - function ppal
+ *
  * Return: 0 on succes
  */
 int main(void)
